@@ -193,38 +193,66 @@ body{
             }
         }
         &.offer{
-            display:flex;
-            flex-direction: row;
-            .offer_image{
-                img{
-                    display: block;
-                    width: 110%;
-                    border-radius: 5%;
+            .offer_container {
+                width: 100%; /* Container width */
+                .offer_section{
+                    display: flex;
+                    align-items: center;
+                    margin: 1.5em 0; /* Margin top and bottom for each section */
+                    position: relative; /* For positioning text over the image */
+                    &.left{
+                        .text {
+                            left: 0; /* Align text on the left side */
+                        }
+                        img{
+                            float:right;
+                        }
+                    }
+                    &.right{
+                        flex-direction: row-reverse; /* Reverse the order for right-aligned sections */
+                        .text {
+                            right: 0; /* Align text on the right side */
+                        }
+                        img{
+                            float:left;
+                        }
+                    }
+                    .text {
+                        position: absolute;
+                        width: 50%; /* Width of the text block */
+                        padding: 3em 2em;
+                        border-radius: 5%;
+                        color:3848888;
+                        background-color: #F5F5F5; /* Slightly transparent white */
+                        box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adding some shadow for better visibility */
+                    .text-title{
+                        text-align: center;
+                        font-size: 2em;
+                        color: #798787;
+                        padding-bottom:0.5em;
+                    }
+                    .text-body{
+                        font-size: 0.9em;
+                        letter-spacing: 0.1em;
+                        word-spacing: 0.1em;
+                        text-align: center;
+                        text-justify: auto;
+                        line-height: 1.1em;
+                    }
+                    }
+                    .image-placeholder {
+                        flex:1;
+                        margin: 0 10%; /* Horizontal margin */
+                       
+                        img{
+                            width: 60%;
+                            height: 100%;
+                            border-radius: 5%;
+                            box-shadow: 7px 7px 25px 4px #00000025;
+                        }
+                    }
                 }
-            }
-            .offer_text{
-                background-color: #F5F5F5;
-                color:#3d3f3f;
-                display: block;
-                margin: auto;
-                padding: 3% 3%;
-                border-radius: 5%;
-                box-shadow: 10px 10px 30px #00000025;
-                .offer_text-title{
-                    text-align: center;
-                    font-size: 2em;
-                    color: #798787;
-                }
-                .offer_text-body{
-                    padding-top:1em;
-                    font-size: 0.9em;
-                    letter-spacing: 0.1em;
-                    word-spacing: 0.1em;
-                    text-align: center;
-                    text-justify: auto;
-                    line-height: 1.2em;
-                }
-            }
+            } 
         
         }
         &.offer_list{
@@ -252,6 +280,29 @@ body{
                     }
                 } 
         }
+        &#contact{
+            background-color: #F5F5F5;
+            border-radius: 5%;
+            padding: 2% 3% 2% 3%;
+            box-shadow: 7px 7px 25px 4px #00000025;
+            .contact_text{
+                text-align: center;
+                .contact_text-title{
+                    font-size: 2em;
+                    color: #798787;
+                    margin-bottom:2em;
+                }
+                .contact_text-body{
+                    font-size: 1.2em;
+                    margin-left: 2em;
+                    color: #3d3f3f;
+                    line-height: 1.6em;
+                    letter-spacing: 0.1em;
+                    word-spacing: 0.1em;
+                }
+            }
+            
+        }
     }
     section.offer:nth-child(2n+1){
         flex-direction:row-reverse;
@@ -262,6 +313,7 @@ body{
         .offer_text{
             background-color: red;
             padding: 3% 3%;
+            margin-left:auto;
         }
 
     }
