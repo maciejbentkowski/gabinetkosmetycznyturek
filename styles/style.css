@@ -16,6 +16,13 @@ body{
             }
           }
           @media screen and (max-width: 720px) {
+            height: 3em;
+            .header-logo{
+                font-size: 4.5vw;
+            }
+          }
+          @media screen and (max-width: 540px) {
+
             .header-logo{
                 font-size: 5vw;
             }
@@ -202,7 +209,7 @@ body{
                 .offer_section{
                     display: flex;
                     align-items: center;
-                    margin: 2em 0; /* Margin top and bottom for each section */
+                    margin: 3em 0; /* Margin top and bottom for each section */
                     position: relative; /* For positioning text over the image */
                     &.left{
                         .text {
