@@ -1,4 +1,7 @@
 body{
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
     background-color: #E8E8E8;
     header{
         background-color: #848888;
@@ -269,7 +272,7 @@ body{
                     .offer_section{
                         margin: 3em 0;
                         .text {
-                            padding: 1em 1em;
+                            padding: 1.5em 1.5em;
                             .text-title{
                                 font-size: 1.4em;
                             }
@@ -292,7 +295,7 @@ body{
                     .offer_section{
                         margin: 4em 0;
                         .text {
-                            padding: 0.6em 0.6em;
+                            padding: 1em 1em;
                             .text-title{
                                 font-size: 1.2em;
                             }
@@ -316,7 +319,7 @@ body{
                     .offer_section{
                         margin: 4em 0;
                         .text {
-                            padding: 0.3em 0.3em;
+                            padding: 1em 1em;
                             .text-title{
                                 font-size: 1em;
                             }
